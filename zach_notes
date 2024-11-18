@@ -1,0 +1,110 @@
+/Users/annabellemarielozano/Desktop/TestCases-1/custom.txt
+
+Errors:
+
+program begin end;
+1. ^ above program should throw an error, however it is accepted.
+
+2. does not support floats:
+This program is parsed correctly:
+
+program
+_ : int;
+__ : int;
+___ : int;
+begin
+_:=10*__ - 3;
+end;
+
+However this one fails :(
+
+program
+_ : int;
+__ : int;
+___ : int;
+begin
+_:=10*__ - 3.0;
+end;
+
+3. Forgot to check rule 18. Make sure it's only int float or double! 
+
+4. Error: Does not detect <> or <
+
+This program works
+
+program
+_ : int;
+__ : int;
+___ : inttt;
+begin
+_:=10*__ - 3;
+if (_ > _)
+then
+end if;
+end;
+
+This one fails
+
+program
+_ : int;
+__ : int;
+___ : inttt;
+begin
+_:=10*__ - 3;
+if (_ <> _)
+then
+end if;
+end;
+
+This one also fails
+
+program
+_ : int;
+__ : int;
+___ : inttt;
+begin
+_:=10*__ - 3;
+if (_ < _)
+then
+end if;
+end;
+
+5. "2" is a valid identifier
+
+This program works:
+
+program
+_ : int;
+__ : int;
+___ : int;
+2 : int;
+g:int;
+gg:int;
+begin
+_:=10*__ - 3;
+if (_ > _)
+then else
+input g, gg;
+output g, 2;
+end if;
+end;
+
+However, 2 should instead give an error.
+
+6. Same thing with the "{" identifier.
+
+program
+_ : int;
+__ : int;
+___ : int;
+{ : int;
+g:int;
+gg:int;
+begin
+_:=10*__ - 3;
+if (_ > _)
+then else
+input g, gg;
+output g, {;
+end if;
+end;
