@@ -1,0 +1,10 @@
+program
+_ : int;
+__ : int;
+___ : inttt;
+begin
+_:=10*__ - 3;
+if (_ <> _)
+then
+end if;
+end;
