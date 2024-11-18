@@ -5,6 +5,14 @@ Fall 2024
 Term Project
 Due Date: 11/17/2024
 
+DEAR READER!! 
+
+This project took 2 months to compete and lots of testing (lots...of...testing...) but we made it!
+
+Once you run the program, the program will ask you to provide the file path of the input you want to be scanned and parsed using this recursive decent parser. Make sure to know exactly what the file path is on your computer, or know where to copy the file path and just paste it in the correct place. 
+
+Below is a list of all the rules and information that was used to create this program.
+
 In this project, you are to implement a scanner and a recursive descent parser for a small programming language (let’s call it Hawk). Your program will take as input a program written in the provided language. In addition to parsing the input programs, your program must generate the proper errors when encountered.
 
 The following is the grammar that you will use:
@@ -29,8 +37,6 @@ Rule 18: TYPE -> int | float | double
 
 This grammar has 18 rules. It also has reserved words in it indicating that they cannot be used for identifiers. Non-terminal symbols are those that are capitalized, and terminal symbols are those that are lowercase. Many rules have alternative choices, for example Rule 09 has two alternatives, one without an else, and one with and else.
  
-
- 
 The following are the lexemes for the language:
 • Reserved words: program, begin, end, if, then, else, input, output, int, while, loop.
 • Operators: assignment (:=), less than (<), greater than (>), equals (=), not equals (<>), plus (+), minus (-) , multiply (*), divide (/) and parentheses.
@@ -48,3 +54,12 @@ Other errors that could be generated upon scanning and parsing a program:
 
 All errors must indicate the line number in the file. All error message must be descriptive as well indicating what happened precisely. Upon encountering an error, you must exit the program immediately after reporting the error and its location. You will be provided with some test cases to use to test your program. However, your implementation should work with other test cases. So, you are encouraged to generate your own test cases to make them work with your parser. Programs that pass the parser and the scanner should output the left-hand side of the rules that it followed. No need to worry about producing rules 5, 16, and 18 as they are more about the scanner than the parser. Make sure no spaces before or after the output are produced. You must produce the output as describe, see the below examples. Programs that have errors should produce the same output until they reach an error and then produce a statement indicating the error type and exit.
 
+An execuative decission was made to use 3 files to write the code
+  1. Main
+  2. Parse Tree
+  3. Tokens
+This decission was made to try and keep the code as clean, readable, less cluttered and easy to follow.
+
+Thank you!!
+
+Annabelle Lozano
